@@ -14,10 +14,15 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group",
 #for artist in result['artist-list']:
 print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
-result['artist-list'][0]['id']
+print(result['artist-list'][0]['id'])
 #result['artist-list'][id]
-print(result)
-
+# print(result)
+# {'artist-list': [{'id': 'cc197bad-dc9c-440d-a5b5-d52ba2e14234', 
+# 'type': 'Group', 
+# 'ext:score': '100', 
+# 'name': 'Coldplay', 
+# 'sort-name': 'Coldplay', 
+# 'country': 'GB', 'area': {'id': '8a754a16-0027-3a29-b6d7-2b40ea0481ed', 
 # Dictionary synax 
 #my_dict {'key1':'value1','key2':'value2'}
 
