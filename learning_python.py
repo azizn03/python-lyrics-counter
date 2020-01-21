@@ -3,25 +3,22 @@
 
 from urllib.request import Request, urlopen
 import musicbrainzngs
-import sys
+import random
+randNum = random.randrange(0, 10)
+
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 #musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
 
 artist = input("Enter Artist Name ")
 
-# musicbrainzngs.search_artists(query='', limit=None, offset=None, strict=False, **fields)
-# Search for artists and return a dict with an ‘artist-list’ key.
-
 result = musicbrainzngs.search_artists(artist="" + artist, type="group", country="GB")
 
-artistid = print(result['artist-list'][0]['id'])
+artistid = result['artist-list'][0]['id']
 
-x = musicbrainzngs.browse_releases(artist="cc197bad-dc9c-440d-a5b5-d52ba2e14234")
+x = musicbrainzngs.browse_releases(artist="" + str(artistid))
 
-
-#print("{title}".format(title=title['title']))
-
-print(x['release-list'][0]['title'])
+for i in range(5):
+print(x['release-list'][randNum]['title'])
 
 
 #print(x)
@@ -33,7 +30,9 @@ print(x['release-list'][0]['title'])
 #    print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
 
-
+# artist = input("Enter Artist Name ")
+# song = input ("Enter Song Name ")
+# request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
 
 
@@ -55,9 +54,7 @@ print(x['release-list'][0]['title'])
 # Dictionary synax 
 #my_dict {'key1':'value1','key2':'value2'}
 
-# artist = input("Enter Artist Name ")
-# song = input ("Enter Song Name ")
-# request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
+
 
 # x = musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
 
