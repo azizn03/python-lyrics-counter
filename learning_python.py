@@ -17,7 +17,7 @@ for artist in result['artist-list']:
 print(result[0])
 print(result)
 print(result['' + artist])
-print("{id}")
+print("{id}".format(id=artist['id']))
 
 # Dictionary synax 
 #my_dict {'key1':'value1','key2':'value2'}
