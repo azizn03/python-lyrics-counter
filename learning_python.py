@@ -2,21 +2,30 @@
 #variable assigment:
 
 from urllib.request import Request, urlopen
-from __future__ import print_function
-from __future__ import unicode_literals
 import musicbrainzngs
 import sys
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 #musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
 
 artist = input("Enter Artist Name ")
-song = input ("Enter Song Name ")
-request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
-x = musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
 
-xx = x["releases"]
-print(xx)
+result = musicbrainzngs.search_artists(artist="" + artist, type="group",
+                                       country="GB")
+for artist in result['artist-list']:
+    print(u"{id}: {name}".format(id=artist['id'], name=artist["name"]))
+
+
+
+
+# artist = input("Enter Artist Name ")
+# song = input ("Enter Song Name ")
+# request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
+
+# x = musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
+
+# xx = x["releases"]
+# print(xx)
 
 # thisdict =	{
 #   "brand": "Ford",
