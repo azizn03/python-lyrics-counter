@@ -11,8 +11,8 @@ artist = input("Enter Artist Name ")
 
 result = musicbrainzngs.search_artists(artist="" + artist, type="group",
                                        country="GB")
-#for artist in result['artist-list']:
-print("{name}: {id}".format(name=artist["name"], id=artist['id']))
+for artist in result['artist-list']:
+    print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
 print(result['artist-list'][0]['id'])
 #result['artist-list'][id]
