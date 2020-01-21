@@ -16,12 +16,12 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group", country
 
 artistid = print(result['artist-list'][0]['id'])
 
-x = musicbrainzngs.browse_releases(artist="cc197bad-dc9c-440d-a5b5-d52ba2e14234")
+x = musicbrainzngs.browse_releases(artist="cc197bad-dc9c-440d-a5b5-d52ba2e14234", status="Offical")
 
 
 #print("{title}".format(title=title['title']))
 
-print(x['release-list'])
+print(x['release-list'][0]['title'])
 
 
 #print(x)
