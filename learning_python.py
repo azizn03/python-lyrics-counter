@@ -19,7 +19,11 @@ x = musicbrainzngs.browse_releases(artist="" + str(artistid))
 
 for i in range(5):
     print(x['release-list'][randNum]['title'])
+<<<<<<< HEAD
 
+=======
+    randNum
+>>>>>>> b9b8d65344ffaaf90a8751a4baff585e65d7731b
 
 #print(x)
 #recording-list
