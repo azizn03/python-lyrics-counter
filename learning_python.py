@@ -6,7 +6,7 @@ import musicbrainzngs
 import random
 
 list=[]
-for i in range(10):
+for i in range(5):
     r=random.randint(1,30)
     if r not in list: list.append(r)
 n = 0
