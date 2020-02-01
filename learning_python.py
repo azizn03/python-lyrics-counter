@@ -7,7 +7,7 @@ import random
 
 list=[]
 for i in range(10):
-    r=random.randint(1,10)
+    r=random.randint(1,20)
     if r not in list: list.append(r)
 n = 0
 print(list)
