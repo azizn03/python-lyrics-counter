@@ -15,7 +15,7 @@ for artist in result['artist-list']:
     print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
 
-result['artist-list'][0]['id'][0]
+result['id'][0]
 print(result)
 
 # Dictionary synax 
