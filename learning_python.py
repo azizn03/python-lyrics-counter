@@ -9,12 +9,35 @@ musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 
 artist = input("Enter Artist Name ")
 
-result = musicbrainzngs.search_artists(artist="" + artist, type="group",
-                                       country="GB")
+# musicbrainzngs.search_artists(query='', limit=None, offset=None, strict=False, **fields)
+# Search for artists and return a dict with an ‘artist-list’ key.
+
+result = musicbrainzngs.search_artists(artist="" + artist, type="group", country="GB")
+
+artistid = print(result['artist-list'][0]['id'])
+
+x = musicbrainzngs.browse_releases(artist=artistid)
+
+print(x)
+#recording-list
+
+
+
 #for artist in result['artist-list']:
 #    print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
-artistid = print(result['artist-list'][0]['id'])
+
+
+
+
+
+
+
+
+
+
+
+
 #result['artist-list'][id]
 # print(result)
 # {'artist-list': [{'id': 'cc197bad-dc9c-440d-a5b5-d52ba2e14234', 
