@@ -28,7 +28,7 @@ x = musicbrainzngs.browse_releases(artist="" + str(artistid))
 for i in range(5):
     print(x['release-list'][list[n]]['title'])
     n += 1
-    x = songslist.append
+    songslist.append(x)
     # for i in range(10):
     #       r=random.randint(1,100)
     #       if r not in list: list.append(r)
