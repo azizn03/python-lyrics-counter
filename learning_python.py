@@ -4,7 +4,7 @@
 from urllib.request import Request, urlopen
 import musicbrainzngs
 import random
-randNum = random.randrange(0, 10)
+randNum = print(random.randrange(0, 10))
 
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 #musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
