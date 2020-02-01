@@ -14,10 +14,9 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group",
 for artist in result['artist-list']:
     print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
-print(result[0])
+
+result['artist-list'][0]['id']
 print(result)
-print(result['' + artist])
-print("{id}".format(id=artist['id']))
 
 # Dictionary synax 
 #my_dict {'key1':'value1','key2':'value2'}
