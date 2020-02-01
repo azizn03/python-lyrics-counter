@@ -19,8 +19,9 @@ artistid = print(result['artist-list'][0]['id'])
 x = musicbrainzngs.browse_releases(artist="cc197bad-dc9c-440d-a5b5-d52ba2e14234")
 
 
-print("{title}".format(title=title['title']))
+#print("{title}".format(title=title['title']))
 
+print(x['release-list'])
 
 
 #print(x)
