@@ -23,7 +23,7 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group", country
 
 artistid = result['artist-list'][0]['id']
 
-x = musicbrainzngs.browse_releases(artist="" + str(artistid), country="GB")
+x = musicbrainzngs.search_releases(artist="" + str(artistid), country="GB")
 
 xx = x['release-list'][list[n]]['title']
 
