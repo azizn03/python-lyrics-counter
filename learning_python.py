@@ -16,7 +16,7 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group", country
 
 artistid = print(result['artist-list'][0]['id'])
 
-x = musicbrainzngs.browse_releases(artist=artistid)
+x = musicbrainzngs.browse_releases(artist="" + artistid)
 
 print(x)
 #recording-list
