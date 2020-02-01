@@ -9,7 +9,7 @@ n = 0
 songslist = []
 list=[]
 for i in range(5):
-    r=random.randint(1,20)
+    r=random.randint(1,10)
     if r not in list: list.append(r)
 
 
