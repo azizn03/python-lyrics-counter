@@ -14,7 +14,7 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group",
 for artist in result['artist-list']:
     print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
-print(result['artist-list'][0]['id'])
+artistid = print(result['artist-list'][0]['id'])
 #result['artist-list'][id]
 # print(result)
 # {'artist-list': [{'id': 'cc197bad-dc9c-440d-a5b5-d52ba2e14234', 
