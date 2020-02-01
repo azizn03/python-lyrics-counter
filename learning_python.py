@@ -2,8 +2,6 @@
 #variable assigment:
 
 from urllib.request import Request, urlopen
-from __future__ import print_function
-from __future__ import unicode_literals
 import musicbrainzngs
 import sys
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
