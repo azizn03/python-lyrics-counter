@@ -6,9 +6,9 @@ import musicbrainzngs
 import random
 
 list=[]
-    for i in range(10):
-          r=random.randint(1,100)
-          if r not in list: list.append(r)
+for i in range(10):
+    r=random.randint(1,100)
+    if r not in list: list.append(r)
 n = 0
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 #musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
