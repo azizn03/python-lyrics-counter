@@ -4,13 +4,15 @@
 from urllib.request import Request, urlopen
 import musicbrainzngs
 import random
-
+nn = 5
 n = 0
 songslist = []
 list=[]
-for i in range(5):
-    r=random.randint(1,10)
-    if r not in list: list.append(r)
+for i in range(nn):
+    r=random.randint(1,20)
+    if r not in list: 
+        list.append(r)
+        nn += 1
 
 
 print(list)
