@@ -5,11 +5,14 @@ from urllib.request import Request, urlopen
 import musicbrainzngs
 import random
 
+n = 0
+songslist = []
 list=[]
 for i in range(5):
     r=random.randint(1,20)
     if r not in list: list.append(r)
-n = 0
+
+
 print(list)
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 #musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
@@ -25,12 +28,15 @@ x = musicbrainzngs.browse_releases(artist="" + str(artistid))
 for i in range(5):
     print(x['release-list'][list[n]]['title'])
     n += 1
+    x = songslist.append
     # for i in range(10):
     #       r=random.randint(1,100)
     #       if r not in list: list.append(r)
 #print(x)
 #recording-list
 
+for y in songslist:
+  print(y)
 
 
 #for artist in result['artist-list']:
