@@ -9,14 +9,15 @@ musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 
 artist = input("Enter Artist Name ")
 
-
 result = musicbrainzngs.search_artists(artist="" + artist, type="group",
                                        country="GB")
 for artist in result['artist-list']:
-    print(u"{id}: {name}".format(id=artist['id'], name=artist["name"]))
+    print(u"{name}: {id}".format(name=artist["name"], id=artist['id']))
 
+list(u)[0]
 
-
+# Dictionary synax 
+#my_dict {'key1':'value1','key2':'value2'}
 
 # artist = input("Enter Artist Name ")
 # song = input ("Enter Song Name ")
