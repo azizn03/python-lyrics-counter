@@ -2,10 +2,12 @@
 #variable assigment:
 
 from urllib.request import Request, urlopen
+from __future__ import print_function
+from __future__ import unicode_literals
 import musicbrainzngs
-
-musicbrainzngs.set_useragent("LyricsWordCount", "1.0", contact="azizn03")
-musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
+import sys
+musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
+#musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
 
 artist = input("Enter Artist Name ")
 song = input ("Enter Song Name ")
