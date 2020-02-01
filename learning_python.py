@@ -25,10 +25,8 @@ artistid = result['artist-list'][0]['id']
 
 x = musicbrainzngs.search_releases(artist="" + str(artistid), country="GB")
 
-xx = x['release-list'][list[n]]['title']
-
 for i in range(5):
-    print(xx)
+    print(x['release-list'][list[n]]['title'])
     n += 1
     songslist.append(x)
     # for i in range(10):
