@@ -11,9 +11,9 @@ artist = input("Enter Artist Name ")
 song = input ("Enter Song Name ")
 request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
-musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
+x = musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
 
-xx = "cc197bad-dc9c-440d-a5b5-d52ba2e14234"["releases"]
+xx = x["releases"]
 print(xx)
 
 # thisdict =	{
