@@ -18,8 +18,8 @@ artistid = result['artist-list'][0]['id']
 x = musicbrainzngs.browse_releases(artist="" + str(artistid))
 
 for i in range(5):
-    print(x['release-list']['' + randNum]['title'])
-
+    print(x['release-list'][randNum]['title'])
+    randNum
 
 #print(x)
 #recording-list
