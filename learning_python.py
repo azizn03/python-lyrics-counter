@@ -40,7 +40,7 @@ for i in range(5):
 for y in songslist:
   print(y)
 
-print(x['release-list']
+print(x)
 #for artist in result['artist-list']:
 #    print("{name}: {id}".format(name=artist["name"], id=artist['id']))
 
