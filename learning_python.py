@@ -36,9 +36,15 @@ print(artist)
 request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
 
-response_body = urlopen(request).read()
-response_bodyy = response_body['lyrics']
-print(str(response_bodyy, 'utf-8').replace("\n", " ")) 
+response_body = urlopen(request).read()         # Returns byte value
+response_body = str(response_body, 'utf-8')     # Coverts byte to string
+response_body = ast.literal_eval(response_body) # Converts String to Dict
+response_body = response_body['lyrics']         # Gets the Dict Lyrics value 
+response_body = str(response_body)              # converts back to string
+
+print(response_body) 
+res = len(response_body.split())
+
 
 # x = musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
 
