@@ -9,10 +9,8 @@ import random
 songslist = []
 
 list=[]
-
 xx = 0
 r=random.sample(range(11), 5)
-
 for i in range(5):
     list.append(r[xx])
     xx += 1
