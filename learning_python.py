@@ -28,7 +28,8 @@ for i in range(5):
     n += 1
     songslist.append(x)
     
-str(song) = songslist[1]
+song = songslist[1]
+print(type(song))
 request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
 
