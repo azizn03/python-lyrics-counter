@@ -17,8 +17,7 @@ def home():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    text = request.form['text']
-    artist = text
+    artist = request.form['text']
     return artist
 
 songslist = []
