@@ -6,18 +6,18 @@ import musicbrainzngs
 import random
 import json 
 import ast
-
+import statistics # calculating the mean value
 songslist = []
-
-list=[]
+countlist = []
+listt=[]
 n = 0
 xx = 0
 r=random.sample(range(16), 5)
 for i in range(5):
-    list.append(r[xx])
+    listt.append(r[xx])
     xx += 1
 
-print(list)
+print(listt)
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 
 artist = input("Enter Artist Name ")
@@ -30,22 +30,22 @@ for i in range(5):
     songslist.append(xx)
     n += 1
     
-    
-song = json.dumps(songslist[1])
-print(song)
-print(artist)
-request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
+n = 0
+
+if i in range(5):
+    song = json.dumps(songslist[n])
+    request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
+    response_body = urlopen(request).read()         # Returns byte value
+    response_body = str(response_body, 'utf-8')     # Coverts byte to string
+    response_body = ast.literal_eval(response_body) # Converts String to Dict
+    response_body = response_body['lyrics']         # Gets the Dict Lyrics value 
+    response_body = str(response_body)              # converts back to string
+    res = len(response_body.split())
+    countlist.append(res)
+    n += 1
 
 
-response_body = urlopen(request).read()         # Returns byte value
-response_body = str(response_body, 'utf-8')     # Coverts byte to string
-response_body = ast.literal_eval(response_body) # Converts String to Dict
-response_body = response_body['lyrics']         # Gets the Dict Lyrics value 
-response_body = str(response_body)              # converts back to string
-
-print(response_body) 
-res = len(response_body.split())
-
+print(statistics.mean(countlist))
 
 # x = musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
 
