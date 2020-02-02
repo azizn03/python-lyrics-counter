@@ -1,17 +1,19 @@
 FROM centos:7
 
-RUN yum -y update \
-     install curl \
-     centos-release-scl \
-     rh-python36 \
+RUN yum -y update && yum -y install curl \
+    python3 \
+    python3-pip \
+    && cd /usr/local/bin \
+    && ln -s /usr/bin/python3 python \
+    && pip3 install --upgrade pip
+     
 
+# RUN cd /var/tmp && \
+#     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+#     python get-pip.py && \
+#     rm get-pip.py
 
-RUN cd /var/tmp && \
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-    python get-pip.py && \
-    rm get-pip.py
-
-RUN pip install musicbrainzngs
+RUN pip3 install musicbrainzngs
 
 COPY ./ /tmp/
 
