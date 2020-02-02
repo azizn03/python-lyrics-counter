@@ -66,7 +66,7 @@ print("\n")
 print('The Following Songs have been compared:')
 n = 0
 for i in range(5):
-    print(songslist[n]
+    print(songslist[n])
     n += 1
 
 # if __name__ == "__main__":
