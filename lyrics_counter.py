@@ -48,7 +48,7 @@ if i in range(5):
     res = len(response_body.split())
     countlist.append(res)
     n += 1
-
+    print(countlist)
 # Results
 print("\n")
 print('The Average wordcount of ' + artist + ' from 5 songs is ' + str(statistics.mean(countlist)))
