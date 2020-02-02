@@ -9,7 +9,7 @@ import random
 songslist = []
 
 list=[]
-n = 
+n = 0
 xx = 0
 r=random.sample(range(11), 5)
 for i in range(5):
