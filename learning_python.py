@@ -30,6 +30,7 @@ for i in range(5):
     
 song = json.dumps(songslist[1])
 print(song)
+print(artist)
 request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
 
