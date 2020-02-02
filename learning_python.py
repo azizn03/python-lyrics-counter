@@ -26,7 +26,7 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group", country
 
 artistid = result['artist-list'][0]['id']
 
-x = musicbrainzngs.search_releases(artist="Coldplay", country="GB", status="Offical")
+x = musicbrainzngs.search_releases(artist="Coldplay", country="GB", status="Offical" format='CD')
 
 for i in range(5):
     print(x['release-list'][list[n]]['title'])
