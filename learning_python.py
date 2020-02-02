@@ -26,12 +26,12 @@ x = musicbrainzngs.search_releases(artist="" + artist, country="GB", status="Off
 for i in range(5):
     print(x['release-list'][list[n]]['title'])
     n += 1
-    songslist.append(x)
+    songslist.append(x['release-list'][list[n]]['title'])
     
-x = json.dumps(songslist[1])
-print(x)
+songg = json.dumps(songslist[1])
+print(song)
 print(artist)
-request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + x.replace(" ", "%20"))
+request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
 
 response_body = urlopen(request).read()
