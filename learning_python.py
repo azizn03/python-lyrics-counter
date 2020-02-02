@@ -20,7 +20,7 @@ def my_form_post():
     artist = request.form['text']
     return artist
 
-artist = my_form_post()
+artist = my_form_post(artist)
 
 songslist = []
 countlist = []
