@@ -7,7 +7,7 @@ import random
 import json 
 import ast
 import statistics # calculating the mean value
-from flask import flask, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
