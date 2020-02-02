@@ -5,7 +5,7 @@ from urllib.request import Request, urlopen
 import musicbrainzngs
 import random
 
-n = 0
+
 songslist = []
 
 list=[]
@@ -15,7 +15,7 @@ r=random.sample(range(11), 5)
 
 for i in range(5):
     list.append(r[xx])
-    n += 1
+    xx += 1
 
 print(list)
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
