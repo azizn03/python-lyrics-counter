@@ -25,8 +25,8 @@ artist = input("Enter Artist Name ")
 x = musicbrainzngs.search_releases(artist="" + artist, country="GB", status="Offical", format='CD')
 
 for i in range(5):
-    print(x['release-list'][list[n]]['title'])
-    xx = x['release-list'][list[n]]['title']
+    print(x['release-list'][listt[n]]['title'])
+    xx = x['release-list'][listt[n]]['title']
     songslist.append(xx)
     n += 1
     
