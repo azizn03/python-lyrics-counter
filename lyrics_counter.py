@@ -49,7 +49,9 @@ if i in range(5):
     countlist.append(res)
     n += 1
 
-print(countlist)
+for x in range(len(countlist)): 
+    print countlist[x], 
+
 # Results
 print("\n")
 print('The Average wordcount of ' + artist + ' from 5 songs is ' + str(statistics.mean(countlist)))
