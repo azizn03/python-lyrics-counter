@@ -7,13 +7,19 @@ import random
 import json 
 import ast
 import statistics # calculating the mean value
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     return render_template("index.htm")
+
+@app.route('/', methods=['POST'])
+def my_form_post():
+    text = request.form['text']
+    artist = text
+    return artist
 
 songslist = []
 countlist = []
@@ -29,7 +35,7 @@ for i in range(5):
 print(listt)
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
 
-artist = input("Enter Artist Name ")
+#artist = input("Enter Artist Name ")
 
 x = musicbrainzngs.search_releases(artist="" + artist, country="GB", status="Offical", format='CD')
 
