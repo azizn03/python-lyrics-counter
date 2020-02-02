@@ -34,7 +34,7 @@ request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/
 
 
 response_body = urlopen(request).read()
-print response_body
+print(response_body)
 
 
 
