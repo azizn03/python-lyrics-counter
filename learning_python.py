@@ -18,13 +18,8 @@ for i in range(5):
 
 print(list)
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
-#musicbrainzngs.set_hostname("musicbrainz.org", use_https=False)
 
 artist = input("Enter Artist Name ")
-
-result = musicbrainzngs.search_artists(artist="" + artist, type="group", country="GB")
-
-artistid = result['artist-list'][0]['id']
 
 x = musicbrainzngs.search_releases(artist="" + artist, country="GB", status="Offical", format='CD')
 
@@ -32,43 +27,15 @@ for i in range(5):
     print(x['release-list'][list[n]]['title'])
     n += 1
     songslist.append(x)
-    # for i in range(10):
-    #       r=random.randint(1,100)
-    #       if r not in list: list.append(r)
-#print(x)
-#recording-list
-
-for y in songslist:
+    
+ for y in songslist:
   print(y)
 
-print(x)
-#for artist in result['artist-list']:
-#    print("{name}: {id}".format(name=artist["name"], id=artist['id']))
+
+song = songslist[1]
+request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
 
 
-# artist = input("Enter Artist Name ")
-# song = input ("Enter Song Name ")
-# request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
-
-
-
-
-
-
-
-
-
-
-#result['artist-list'][id]
-# print(result)
-# {'artist-list': [{'id': 'cc197bad-dc9c-440d-a5b5-d52ba2e14234', 
-# 'type': 'Group', 
-# 'ext:score': '100', 
-# 'name': 'Coldplay', 
-# 'sort-name': 'Coldplay', 
-# 'country': 'GB', 'area': {'id': '8a754a16-0027-3a29-b6d7-2b40ea0481ed', 
-# Dictionary synax 
-#my_dict {'key1':'value1','key2':'value2'}
 
 
 
@@ -76,20 +43,6 @@ print(x)
 
 # xx = x["releases"]
 # print(xx)
-
-# thisdict =	{
-#   "brand": "Ford",
-#   "model": "Mustang",
-#   "year": 1964
-# }
-# x = thisdict["model"]
-# print(x)
-
-
-
-
-
-
 
 
 # print(response_body)
@@ -145,18 +98,7 @@ print(x)
 # print(len(course))
 # print(course.upper())
 
-# grabbing array values
-
-# i.e.
-
-# "folowers": {
-#     "href": null,
-#     "total": 21
-# },
 
 # followers = user['followers']['total']
 
-# b = b['lyrics']
-# https://search.azlyrics.com/search.php?q=Coldplay&w=songs&p=2
-# href="https:\/\/www.azlyrics\.com\/lyrics\/coldplay\/[a-z]+\.html"
-# asd href="https://www.azlyrics.com/lyrics/coldplay/sparks.html" qweqwe
+
