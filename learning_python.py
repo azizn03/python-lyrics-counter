@@ -25,8 +25,10 @@ x = musicbrainzngs.search_releases(artist="" + artist, country="GB", status="Off
 
 for i in range(5):
     print(x['release-list'][list[n]]['title'])
+    xx = x['release-list'][list[n]]['title']
+    songslist.append(xx)
     n += 1
-    songslist.append(x['release-list'][list[n]]['title'])
+    
     
 songg = json.dumps(songslist[1])
 print(song)
