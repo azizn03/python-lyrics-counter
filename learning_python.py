@@ -4,7 +4,7 @@
 from urllib.request import Request, urlopen
 import musicbrainzngs
 import random
-
+import json 
 
 songslist = []
 
@@ -28,7 +28,7 @@ for i in range(5):
     n += 1
     songslist.append(x)
     
-song = songslist[1]
+song = json.dumps(songslist[1])
 print(type(song))
 request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + str(song.replace(" ", "%20")))
 
