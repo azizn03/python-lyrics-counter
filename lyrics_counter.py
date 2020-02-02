@@ -49,8 +49,8 @@ if i in range(5):
     countlist.append(res)
     n += 1
 
-for x in range(len(countlist)): 
-    print countlist[x], 
+for x in range(len(countlist)):
+    print(countlist[x])
 
 # Results
 print("\n")
