@@ -61,6 +61,7 @@ if i in range(5):
     n += 1
 print("\n")
 print('The Average wordcount of ' + artist + ' from 5 songs is ' + str(statistics.mean(countlist)))
+print("\n")
 print('The Following Songs have been compared:')
 n = 0
 for i in range(5):
