@@ -4,16 +4,18 @@
 from urllib.request import Request, urlopen
 import musicbrainzngs
 import random
-nn = 5
+
 n = 0
 songslist = []
-list=[]
-for i in range(nn):
-    r=random.randint(1,20)
-    if r not in list: 
-        list.append(r)
-        nn += 1
 
+list=[]
+
+xx = 0
+r=random.sample(range(11), 5)
+
+for i in range(5):
+    list.append(r[xx])
+    n += 1
 
 print(list)
 musicbrainzngs.set_useragent("LyricsWordCount", "1.0", "azizn03",)
