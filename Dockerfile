@@ -5,5 +5,4 @@ RUN yum -y update && yum -y install curl \
     && cd /usr/local/bin \
     && ln -s /usr/bin/python3 python \
     && pip3 install --upgrade pip \
-RUN mkdir /python
 RUN pip3 install musicbrainzngs

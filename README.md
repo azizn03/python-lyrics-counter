@@ -11,4 +11,9 @@ Prerequisites
 
 ## Program details
 
-This program searches for 5 songs within the Music
+This program searches for 5 songs and average the word from the lyrics of those 5 songs.
+
+## Bugs
+
+While the songs have been filtered as much as possible the same song might appear more than once.
+Sometimes the returned value does not return any lyrics and a HTTP error is returned. Simply re-run the program.
