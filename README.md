@@ -7,7 +7,8 @@ Prerequisites
 
 - Build Docker file using: `make build`
 - Run Docker file using: `make run`
-- Run CLI python script using command 'python lyrics_counter.py' 
+- Go into the /python directory within the container. command `cd /python`
+- Run CLI python script using command `python lyrics_counter.py` 
 
 ## Program details
 

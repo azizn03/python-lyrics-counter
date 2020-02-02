@@ -58,5 +58,5 @@ print('The Following Songs have been compared:')
 # List songs along with word count used in Calculations
 n = 0
 for i in range(5):
-    print(songslist[n] + ': ' + countlist[n])
+    print(songslist[n] + ': ' + str(countlist[n]))
     n += 1
