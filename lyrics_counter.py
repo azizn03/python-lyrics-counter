@@ -37,7 +37,7 @@ for i in range(5):
 n = 0
 
 # Takes Songs and inputs them in the request api and then lyric word count is added to countlist.
-if i in range(5):
+for i in range(5):
     song = json.dumps(songslist[n])
     request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
     response_body = urlopen(request).read()         # Returns byte value
@@ -48,9 +48,6 @@ if i in range(5):
     res = len(response_body.split())
     countlist.append(res)
     n += 1
-
-for x in range(len(countlist)):
-    print(countlist[x])
 
 # Results
 print("\n")
