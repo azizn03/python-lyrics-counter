@@ -21,6 +21,7 @@ def my_form_post():
     artist = text
     return artist
 
+artist = my_form_post()
 
 songslist = []
 countlist = []
