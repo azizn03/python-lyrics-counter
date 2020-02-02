@@ -2,4 +2,4 @@ build:
 	docker build -t lyricscount .
 
 run:
-	docker run -it -w $(pwd):/python lyricscount:latest bash 
+	docker run --rm -it -v ${PWD}:/python lyricscount:latest bash && cd /python

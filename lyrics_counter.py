@@ -55,8 +55,8 @@ print('The Average wordcount of ' + artist + ' from 5 songs is ' + str(statistic
 print("\n")
 print('The Following Songs have been compared:')
 
-# List songs used in Calculations
+# List songs along with word count used in Calculations
 n = 0
 for i in range(5):
-    print(songslist[n])
+    print(songslist[n] + ': ' + countlist[n])
     n += 1
