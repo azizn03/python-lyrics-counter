@@ -51,9 +51,9 @@ for i in range(5):
 
 # Results
 print("\n")
-print('The Average wordcount of ' + artist + ' from 5 songs is ' + str(statistics.mean(countlist)))
+print('The Average word count of ' + artist + ' from 5 songs is ' + str(statistics.mean(countlist)))
 print("\n")
-print('The Following Songs have been compared:')
+print('The Following 5 random songs have been compared:')
 
 # List songs along with word count used in Calculations
 n = 0
