@@ -9,7 +9,7 @@ import ast
 import statistics # calculating the mean value
 from flask import flask, render_template
 
-app = = Flask(__name__)
+app = Flask(__name__)
 
 @app.route("/")
 def home():
