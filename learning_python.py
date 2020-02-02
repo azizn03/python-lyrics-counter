@@ -30,7 +30,7 @@ for i in range(5):
     
 song = songslist[1]
 print(type(song))
-request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + song.replace(" ", "%20"))
+request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/' + str(song.replace(" ", "%20")))
 
 
 
