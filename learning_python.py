@@ -25,7 +25,7 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group", country
 
 artistid = result['artist-list'][0]['id']
 
-x = musicbrainzngs.search_releases(artist="" + str(artistid), country=["GB"])
+x = musicbrainzngs.search_releases(artist="" + str(artistid), country="GB")
 
 for i in range(5):
     print(x['release-list'][list[n]]['title'])
