@@ -9,7 +9,7 @@ import random
 songslist = []
 
 list=[]
-n = 0
+n = 
 xx = 0
 r=random.sample(range(11), 5)
 for i in range(5):
@@ -26,7 +26,7 @@ result = musicbrainzngs.search_artists(artist="" + artist, type="group", country
 
 artistid = result['artist-list'][0]['id']
 
-x = musicbrainzngs.search_releases(id="" + str(artistid), country="GB")
+x = musicbrainzngs.search_releases(artist="Coldplay", country="GB")
 
 for i in range(5):
     print(x['release-list'][list[n]]['title'])
