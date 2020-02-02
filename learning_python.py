@@ -7,6 +7,13 @@ import random
 import json 
 import ast
 import statistics # calculating the mean value
+from flask import flask, render_template
+
+app = = Flask(__name__)
+
+@app.route("/")
+def home():
+    return return render_template("index.html")
 
 songslist = []
 countlist = []
@@ -49,4 +56,5 @@ if i in range(5):
 
 print(statistics.mean(countlist))
 
-
+if __name__ == "__main__":
+    app.run()
