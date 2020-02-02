@@ -37,7 +37,7 @@ request = Request('https://api.lyrics.ovh/v1/' + artist.replace(" ", "%20") + '/
 
 
 response_body = urlopen(request).read()
-print(str(response_body, 'utf-8').replace("\n", " ")) 
+print(str(response_body['lyrics'], 'utf-8').replace("\n", " ")) 
 
 # x = musicbrainzngs.get_artist_by_id("cc197bad-dc9c-440d-a5b5-d52ba2e14234", includes=["releases"], release_status=[], release_type=[])
 
