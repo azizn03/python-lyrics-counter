@@ -11,4 +11,4 @@ Prerequisites
 
 ## Program details
 
-This program searches for 5 songs within the Music
+This program searches from 5 random songs from a chosen artist then gives the word count average from the 5 songs. 
